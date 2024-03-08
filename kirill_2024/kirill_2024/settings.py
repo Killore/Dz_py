@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'project'
+    'project.apps.ProjectConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'kirill_2024.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['kirill_2024/templates'],
+        'DIRS': ['kirill_2024/templates',
+                 'blog/templates',
+                 'project/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
